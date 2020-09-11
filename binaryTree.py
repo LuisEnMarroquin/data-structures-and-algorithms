@@ -1,30 +1,10 @@
-"""
-
-Given a binary tree, get the average value at each level of the tree
-
-Input:
-
-|     04     |     n1     |
-|    /  \    |    /  \    |
-|   07  09   |   n2  n3   |
-|  /  \  \   |  /  \  \   |
-| 10  02  06 | n4  n5  n6 |
-|      \     |      \     |
-|      06    |      n7    |
-|      /     |      /     |
-|     02     |     n8     |
-
-Output: [4, 8, 6, 6, 2]
-
-"""
-
-class Node(object):
+class Node():
   def __init__(self, val, left, right):
     self.val = val
     self.left = left
     self.right = right
 
-def _collect(node, data, depth = 0):
+def collect(node, data, depth = 0):
   if not node:
     return None
 
@@ -33,14 +13,16 @@ def _collect(node, data, depth = 0):
 
   data[depth].append(node.val)
 
-  _collect(node.left, data, depth + 1)
-  _collect(node.right, data, depth + 1)
+  collect(node.left, data, depth + 1)
+  collect(node.right, data, depth + 1)
 
-def avg_by_depth(node):
+  return None
+
+def avgByDepth(node):
   data = {}
-  _collect(node, data)
-
   result = []
+
+  collect(node, data)
 
   i = 0
   while i in data:
@@ -60,6 +42,6 @@ n3 = Node(9, n6, False)
 n2 = Node(7, n4, n5)
 n1 = Node(4, n2, n3)
 
-finalResult = avg_by_depth(n1)
+finalResult = avgByDepth(n1)
 
 print(finalResult)
