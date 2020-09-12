@@ -23,7 +23,34 @@ A data structure is a data organization, management, and storage format that ena
 More precisely, a data structure is a collection of data values, the relationships among them, and the functions or operations that can be applied to the data.
 From [Wikipedia](https://en.wikipedia.org/wiki/Data_structure)
 
-### Hash maps
+### Hash maps (Hash tables)
+
+What is a Hashing algorithm? It's a calculation applied to a key to transform in to an address
+* For numeric keys, divide the key by the number of available addresses and take the remainder
+* For alphanumeric keys, divide the sum of ASCII codes in a key by the number of availiable addresses and take the remainder
+* Folding method divides key into equal parts then adds the parts together
+  * The phone number **01 452 834 5654**, becomes 01 + 45 + 28 + 34 + 56 + 54 = 218
+  * Depending on size of table, may then divide by some constant and take remainder
+
+Files:
+* hashTable.js
+
+| Nm  | 1st    | 2nd     | 3rd     | Operation             | I | Res |
+|-----|--------|---------|---------|-----------------------|---|-----|
+| Mia | M = 77 | i = 105 | a = 097 | (77 + 105 + 097) % 11 | 4 | Bea |
+| Tim | T = 84 | i = 105 | m = 109 | (84 + 105 + 109) % 11 | 1 | Tim |
+| Bea | B = 66 | e = 101 | a = 097 | (66 + 101 + 097) % 11 | 0 | Len |
+| Zoe | Z = 90 | o = 111 | e = 101 | (90 + 111 + 101) % 11 | 5 | Moe |
+| Sue | S = 83 | u = 117 | e = 101 | (83 + 117 + 101) % 11 | 4 | Mia |
+| Len | L = 76 | e = 101 | n = 110 | (76 + 101 + 110) % 11 | 1 | Zoe |
+| Moe | M = 77 | o = 111 | e = 101 | (77 + 111 + 101) % 11 | 3 | Sue |
+| Lou | L = 76 | o = 111 | u = 117 | (76 + 111 + 117) % 11 | 7 | Lou |
+| Rae | R = 82 | a = 097 | e = 101 | (82 + 097 + 101) % 11 | 5 | Rae |
+| Max | M = 77 | a = 097 | x = 120 | (77 + 097 + 120) % 11 | 8 | Max |
+| Tod | T = 84 | o = 111 | d = 100 | (84 + 111 + 100) % 11 | 9 | Tod |
+
+From YouTube channel: **Computer Science** - [Hash Tables and Hash Functions](https://www.youtube.com/watch?v=KyUTuwz_b7Q)
+
 ### Linked lists
 ### Stacks
 ### Queues

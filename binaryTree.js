@@ -1,7 +1,3 @@
-function Node (val, left, right) {
-  return { val, left, right }
-}
-
 let data = []
 let result = []
 
@@ -26,22 +22,20 @@ function avgByDepth (node) {
       sum += number
     })
 
-    let avg = sum / level.length
-
-    result.push(avg)
+    result.push(sum / level.length)
   })
 
   return result
 }
 
-let n8 = Node(2, false, false)
-let n7 = Node(6, n8, false)
-let n6 = Node(6, false, false)
-let n5 = Node(2, false, n7)
-let n4 = Node(10, false, false)
-let n3 = Node(9, n6, false)
-let n2 = Node(7, n4, n5)
-let n1 = Node(4, n2, n3)
+let n8 = { val: 2, left: false, right: false }
+let n7 = { val: 6, left: n8, right: false }
+let n6 = { val: 6, left: false, right: false }
+let n5 = { val: 2, left: false, right: n7 }
+let n4 = { val: 10, left: false, right: false }
+let n3 = { val: 9, left: n6, right: false }
+let n2 = { val: 7, left: n4, right: n5 }
+let n1 = { val: 4, left: n2, right: n3 }
 
 let finalResult = avgByDepth(n1)
 
