@@ -32,6 +32,25 @@ What is a Hashing algorithm? It's a calculation applied to a key to transform in
   * The phone number **01 452 834 5654**, becomes 01 + 45 + 28 + 34 + 56 + 54 = 218
   * Depending on size of table, may then divide by some constant and take remainder
 
+Collision resolution
+* Linear probing
+* Plus 3 rehash
+* Quadratic probing: square(failedAttemps)
+* Double hashing
+
+Objectives of Hash function
+* Minimize collisions
+* Uniform distribution of hash values
+* Easy to calculate
+* Resolve any collisions
+
+Summary
+* Hash tables are used to index large amounts of data
+* Address of each key is calculated using the key itself
+* Collisions are resolved with open or closed addressing
+* Hashing is widely used in database indexing, compilers, caching, password authentication, and more
+* Insertion, deletion and retrieval occur in constant time
+
 Files:
 * hashTable.js
 
