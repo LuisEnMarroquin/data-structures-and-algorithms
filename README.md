@@ -72,6 +72,12 @@ From YouTube channel **Computer Science** - [Hash Tables and Hash Functions](htt
 
 ### Linked lists
 
+A linked list is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next.
+From [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+
+Files
+* linkedList.js
+
 | ID | Added   | Start | NextFree | Next Values in Array | Before  | After   |
 |----|---------|-------|----------|----------------------|---------|---------|
 | 1  | Chloe   | 1     | 2        | [ 0 ]                | -       | -       |
@@ -84,7 +90,31 @@ From YouTube channel **Computer Science** - [Hash Tables and Hash Functions](htt
 From YouTube channel **Computer Science** - [Linked List Data Structure 3. Building a Linked List (algorithm and pseudocode).](https://www.youtube.com/watch?v=RFeshndMUw)
 
 ### Stacks
+
+A stack is a dynamic data structure because the ammout of data that it can increase and decrease while is in use.
+A stack is known as a last in first out data structure because new items are added at the top of the stack, and items can only be removed from the top of the stack.
+We can create const `MaximumSize` to indicate how many items the stack can contain, and `Top` pointer to indicate the top of the stack, with an empty stack `Top = 0`.
+When we take data from the stack we don't necessarily remove it from the array that contains the data, all we need to do is redefine `Top`
+
+Summary
+* Items are **pushed** onto the top of a stack
+* Items are **popped** off the top of a stack
+* A last in first out data structure (LIFO)
+* A stack is an abstract data type (ADT)
+* Call stack stores return addresses, parameters and register contents when sub routines are called
+* Stacks are used by compilers to evaluate mathematical expressions which requiere intermediate steps
+
+Files
+* stack.js
+* stack.py
+
+From YouTube channel **Computer Science** - [Stack Data Structure - Algorithm](https://www.youtube.com/watch?v=niBsGw4h5yI)
+
 ### Queues
+
+A queue is a dynamic data structure in which items join on the back
+
+From YouTube channel **Computer Science** - [Queue Data Structure - Algorithms](https://www.youtube.com/watch?v=jXMqVpAVyMY)
 
 ### Trees
 
