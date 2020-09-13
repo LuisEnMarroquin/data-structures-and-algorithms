@@ -94,7 +94,7 @@ From YouTube channel **Computer Science** - [Linked List Data Structure 3. Build
 A stack is a dynamic data structure because the ammout of data that it can increase and decrease while is in use.
 A stack is known as a last in first out data structure because new items are added at the top of the stack, and items can only be removed from the top of the stack.
 We can create const `MaximumSize` to indicate how many items the stack can contain, and `Top` pointer to indicate the top of the stack, with an empty stack `Top = 0`.
-When we take data from the stack we don't necessarily remove it from the array that contains the data, all we need to do is redefine `Top`
+When we take data from the stack we don't necessarily remove it from the array that contains the data, all we need to do is redefine `Top`.
 
 Summary
 * Items are **pushed** onto the top of a stack
@@ -112,7 +112,37 @@ From YouTube channel **Computer Science** - [Stack Data Structure - Algorithm](h
 
 ### Queues
 
-A queue is a dynamic data structure in which items join on the back
+A queue is a dynamic data structure in which items join at the back and leave upfront.
+
+Linear queue (Dynamic array)
+* A queue can be implemented as a linear queue, this could involve an array variable, more specifically a dynamic array, one with no fixed size.
+* We also have a system of pointers, one to indicate the front of the queue `Front` and another pointer to indicate the next free position `NextFree`.
+* Taking data from the queue is known as `Dequeue` of `Dequeuing`, and this means taking data from the front pointer and increament `Front`.
+* When we take data from the queue we don't necessarily remove it from the array that contains the data, all we need to do is redefine `Front`.
+* Easy to implement but memory is never freed up
+* A busy queue may use up a lot of memory without 'containing' much data
+
+Linear queue (Static array)
+* We have a slightly different system of pointers, for example for this array `[ Kevin, Sally, Beatrix, null, null, null ]`
+* One the indicate the front `Front=1`, another to indicate the rear `Rear=3` and finally another to indicate the number of items in the queue `NumberInQueue=3`
+* When we dequeue, we take data from the position upfront, increment `Front++` and decrease `NumberInQueue--`
+* When we enqueue data, we increment the values of `Rear++` and `NumberInQueue++`
+
+Circular queue (Can only be: Static array)
+
+Summary
+* A queue is a dynamic data structure
+* New items are added to the rear (enqueued)
+* Items leave from the front (dequeued)
+* A queue is a First In First Out data structure (FIFO)
+* A queue can be Linear or circular
+* A queue is an Abstract Data Type (ADT), this means that data is not necessarily in an array variable, could be stored for example in a text file, a database, etc.
+* Queues are used to hold jobs waitine to be fun, used as buffers (e.g. keyboard), used to spool print output
+
+Files
+* queueCircular.py
+* queueDynamic.py
+* queueStatic.py
 
 From YouTube channel **Computer Science** - [Queue Data Structure - Algorithms](https://www.youtube.com/watch?v=jXMqVpAVyMY)
 
@@ -155,6 +185,9 @@ Algorithms are always unambiguous and are used as specifications for performing 
 From [Wikipedia](https://en.wikipedia.org/wiki/Algorithm)
 
 ### Quicksort
+
+From YouTube channel **Computer Science** - [Quicksort 1 – The Algorithm](https://www.youtube.com/watch?v=h_9kAXFKJwY)
+
 ### Merge sort
 ### Binary search
 ### Depth-first search
