@@ -35,7 +35,7 @@ What is a Hashing algorithm? It's a calculation applied to a key to transform in
 Collision resolution
 * Linear probing
 * Plus 3 rehash
-* Quadratic probing: square(failedAttemps)
+* Quadratic probing => (failedAttemps)²
 * Double hashing
 
 Objectives of Hash function
@@ -51,7 +51,7 @@ Summary
 * Hashing is widely used in database indexing, compilers, caching, password authentication, and more
 * Insertion, deletion and retrieval occur in constant time
 
-Files:
+Files
 * hashTable.js
 
 | Nm  | 1st    | 2nd     | 3rd     | Operation             | I | Res |
@@ -68,9 +68,21 @@ Files:
 | Max | M = 77 | a = 097 | x = 120 | (77 + 097 + 120) % 11 | 8 | Max |
 | Tod | T = 84 | o = 111 | d = 100 | (84 + 111 + 100) % 11 | 9 | Tod |
 
-From YouTube channel: **Computer Science** - [Hash Tables and Hash Functions](https://www.youtube.com/watch?v=KyUTuwz_b7Q)
+From YouTube channel **Computer Science** - [Hash Tables and Hash Functions](https://www.youtube.com/watch?v=KyUTuwz_b7Q)
 
 ### Linked lists
+
+| ID | Added   | Start | NextFree | Next Values in Array |
+|----|---------|-------|----------|----------------------|
+| 1  | Chloe   | 1     | 2        | [ 0 ]                |
+| 2  | Francis | 1     | 3        | [ 2, 0 ]             |
+| 3  | Beatrix | 3     | 4        | [ 2, 0, 1 ]          |
+| 4  | David   | 3     | 5        | [ 4, 0, 1, 2 ]       |
+| 5  | Edward  | 3     | 6        | [ 4, 0, 1, 5, 2 ]    |
+| 6  | Abigail | 6     | 7        | [ 4, 0, 1, 5, 2, 3 ] |
+
+From YouTube channel **Computer Science** - [Linked List Data Structure 3. Building a Linked List (algorithm and pseudocode).](https://www.youtube.com/watch?v=RFeshndMUw)
+
 ### Stacks
 ### Queues
 
@@ -78,15 +90,16 @@ From YouTube channel: **Computer Science** - [Hash Tables and Hash Functions](ht
 
 What is a binary tree? Is a tree data structure in which each node has at most two children
 
-Files:
+Files
 * binaryTree.js
 * binaryTree.py
 
-Challenge:
+Challenge
+
 ```
 Given a binary tree, get the average value at each level of the tree
 
-Input:
+Input
 
 |     04     |     n1     |
 |    /  \    |    /  \    |
@@ -98,7 +111,7 @@ Input:
 |      /     |      /     |
 |     02     |     n8     |
 
-Output: [4, 8, 6, 6, 2]
+Output [4, 8, 6, 6, 2]
 ```
 
 ### Heaps
