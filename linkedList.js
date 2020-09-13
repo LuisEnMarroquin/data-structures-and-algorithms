@@ -13,12 +13,12 @@ class LinkedList {
   }
   get getItemsSorted () {
     let sortedContent = []
-    let findID = this.Content.find( ({ id }) => id === this.Start )
+    let findID = this.Content.find(({ id }) => id === this.Start)
     let nextIndex = findID.id - 1
-    for (let i = 0; i < this.Content.length; i++) {
+    this.Content.forEach(() => {
       sortedContent.push(this.Content[nextIndex])
       nextIndex = this.Content[nextIndex].next - 1
-    }
+    })
     return {
       Start: this.Start,
       Content: sortedContent
@@ -90,6 +90,5 @@ list.addBefore('Abigail', 'Beatrix')
 console.log('\n', list.getItems)
 
 list.addBefore('NoOne', 'NonExisting')
-console.log('\n', list.getItems)
 
-console.log('\n', list.getItemsSorted)
+console.log('\n', 'Sorted:\n', list.getItemsSorted)

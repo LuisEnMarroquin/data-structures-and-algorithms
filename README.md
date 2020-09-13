@@ -72,14 +72,14 @@ From YouTube channel **Computer Science** - [Hash Tables and Hash Functions](htt
 
 ### Linked lists
 
-| ID | Added   | Start | NextFree | Next Values in Array |
-|----|---------|-------|----------|----------------------|
-| 1  | Chloe   | 1     | 2        | [ 0 ]                |
-| 2  | Francis | 1     | 3        | [ 2, 0 ]             |
-| 3  | Beatrix | 3     | 4        | [ 2, 0, 1 ]          |
-| 4  | David   | 3     | 5        | [ 4, 0, 1, 2 ]       |
-| 5  | Edward  | 3     | 6        | [ 4, 0, 1, 5, 2 ]    |
-| 6  | Abigail | 6     | 7        | [ 4, 0, 1, 5, 2, 3 ] |
+| ID | Added   | Start | NextFree | Next Values in Array | Before  | After   |
+|----|---------|-------|----------|----------------------|---------|---------|
+| 1  | Chloe   | 1     | 2        | [ 0 ]                | -       | -       |
+| 2  | Francis | 1     | 3        | [ 2, 0 ]             | Chloe   | -       |
+| 3  | Beatrix | 3     | 4        | [ 2, 0, 1 ]          | -       | Chloe   |
+| 4  | David   | 3     | 5        | [ 4, 0, 1, 2 ]       | Chloe   | Francis |
+| 5  | Edward  | 3     | 6        | [ 4, 0, 1, 5, 2 ]    | David   | Francis |
+| 6  | Abigail | 6     | 7        | [ 4, 0, 1, 5, 2, 3 ] | -       | Beatrix |
 
 From YouTube channel **Computer Science** - [Linked List Data Structure 3. Building a Linked List (algorithm and pseudocode).](https://www.youtube.com/watch?v=RFeshndMUw)
 
