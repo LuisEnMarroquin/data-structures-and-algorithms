@@ -1,87 +1,95 @@
 class LinkedList {
   constructor (firstItem) {
     this.Start = 1
-    this.NextFree = 2
-    this.Contents = [
+    this.Content = [
       { id: 1, next: 0, data: firstItem }
     ]
   }
   get getItems () {
     return {
       Start: this.Start,
-      NextFree: this.NextFree,
-      Contents: this.Contents
+      Content: this.Content
     }
   }
-  addBefore (newItem, beforeOf = null) {
+  get getItemsSorted () {
+    let sortedContent = []
+    let findID = this.Content.find( ({ id }) => id === this.Start )
+    let nextIndex = findID.id - 1
+    for (let i = 0; i < this.Content.length; i++) {
+      sortedContent.push(this.Content[nextIndex])
+      nextIndex = this.Content[nextIndex].next - 1
+    }
+    return {
+      Start: this.Start,
+      Content: sortedContent
+    }
+  }
+  addBefore (newItem, beforeData = null) {
+    let newID = this.Content.length + 1
     let newObject = null
-    if (!beforeOf) {
-      newObject = { id: this.NextFree, next: 0, data: newItem }
-      for (let i = 0; i < this.Contents.length; i++) {
-        if (this.Contents[i].next === this.NextFree - 2) {
-          this.Contents[i].next = this.NextFree
-          i = this.Contents.length
+    if (!beforeData) {
+      newObject = { id: newID, next: 0, data: newItem }
+      for (let i = 0; i < this.Content.length; i++) {
+        if (this.Content[i].next === this.Content.length - 1) {
+          this.Content[i].next = newID
+          break
         }
       }
     } else {
-      let beforeIndex = -1
-      for (let i = 0; i < this.Contents.length; i++) {
-        if (this.Contents[i].data === beforeOf) {
-          beforeIndex = i
-          i = this.Contents.length
+      let afterID = -1
+      let afterIndex = -1
+      for (let i = 0; i < this.Content.length; i++) {
+        if (this.Content[i].data === beforeData) {
+          afterID = this.Content[i].id
+          afterIndex = i
+          break
         }
       }
-      if (beforeIndex !== -1) {
-        if (this.Start === beforeIndex + 1) { // If it's new first item
-          newObject = { id: this.NextFree, next: beforeIndex + 1, data: newItem }
-          this.Start = this.NextFree
+      if (afterIndex !== -1) {
+        let isNewFirstItem = (this.Start === afterIndex + 1)
+        if (isNewFirstItem) {
+          newObject = { id: newID, next: afterIndex + 1, data: newItem }
+          this.Start = newID
         } else {
-
-          let parentIndex = -1
-          for (let i = 0; i < this.Contents.length; i++) {
-            if (this.Contents[i].id === beforeIndex) {
-              parentIndex = i
-              i = this.Contents.length
+          let beforeIndex = -1
+          for (let i = 0; i < this.Content.length; i++) {
+            if (this.Content[i].next === afterID) {
+              beforeIndex = i
+              break
             }
           }
-
-          let previousValue = this.Contents[parentIndex].next
-
-          console.log('\n', { beforeIndex, parentIndex, previousValue }, '\n')
-
-
-
-          // let beforeNext = this.Contents[beforeIndex].next
-          // console.log('\n', this.Contents[beforeIndex], beforeNext, '\n')
-          newObject = { id: this.NextFree, next: previousValue, data: newItem }
-
-          this.Contents[parentIndex].next = this.NextFree
-
+          this.Content[beforeIndex].next = newID
+          newObject = { id: newID, next: afterID, data: newItem }
         }
       } else {
-        console.log(`\nCan't add ${newItem} before ${beforeOf}, because ${beforeOf} doesn't exists\n`)
+        console.log(`\n Can't add ${newItem} before ${beforeData}, because ${beforeData} doesn't exists`)
       }
     }
     if (newObject) {
-      this.Contents[this.NextFree - 1] = newObject
-      this.NextFree = this.NextFree + 1
+      this.Content.push(newObject)
     }
   }
 }
 
 const list = new LinkedList('Chloe')
+console.log('\n', list.getItems)
 
 list.addBefore('Francis')
-console.log(list.getItems)
+console.log('\n', list.getItems)
 
 list.addBefore('Beatrix', 'Chloe')
-console.log(list.getItems)
+console.log('\n', list.getItems)
 
 list.addBefore('David', 'Francis')
-console.log(list.getItems)
+console.log('\n', list.getItems)
 
 list.addBefore('Edward', 'Francis')
-console.log(list.getItems)
+console.log('\n', list.getItems)
 
-// list.addBefore('Abigail', 'Beatrix')
-// console.log(list.getItems)
+list.addBefore('Abigail', 'Beatrix')
+console.log('\n', list.getItems)
+
+list.addBefore('NoOne', 'NonExisting')
+console.log('\n', list.getItems)
+
+console.log('\n', list.getItemsSorted)
