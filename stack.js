@@ -1,47 +1,44 @@
 class Stack {
   constructor (maxSize) {
-    this.Top = 0
-    this.Data = []
-    this.MaximumSize = maxSize
-  }
-  get getItems () {
-    return {
-      Top: this.Top,
-      Data: this.Data
-    }
+    this.top = 0
+    this.data = []
+    this.maximumSize = maxSize
   }
   push (newItem) {
-    if (this.Top < this.MaximumSize) {
-      this.Data[this.Top] = newItem
-      this.Top++
+    if (this.top < this.maximumSize) {
+      this.data[this.top] = newItem
+      this.top++
+      console.log('\n', this.get)
     } else {
-      console.log('\n', 'Stack is full', this.Top)
+      console.log('\n', `Stack (${this.top}) is full, can't add ${newItem}`)
     }
   }
   pop () {
-    if (this.Top !== 0) this.Top--
+    if (this.top !== 0) {
+      this.top--
+      console.log('\n', this.get)
+    }
+  }
+  get get () {
+    return [
+      this.top,
+      this.data.slice(0, this.top)
+    ]
   }
 }
 
-const array = new Stack(5)
+const array = new Stack(3)
 
 array.push('Kevin')
-console.log('\n', array.getItems)
 
 array.push('Sally')
-console.log('\n', array.getItems)
-
-array.push('Beatrix')
-console.log('\n', array.getItems)
 
 array.push('David')
-console.log('\n', array.getItems)
-
-array.push('Jack')
-console.log('\n', array.getItems)
 
 array.push('Sonya')
+
 array.pop()
 
-array.push('Sonya')
-console.log('\n', array.getItems)
+array.push('Jessy')
+
+array.push('Donald')

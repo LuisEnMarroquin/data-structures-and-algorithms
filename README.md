@@ -2,6 +2,11 @@
 
 Some great coding challenges using JavaScript and Python
 
+## Requirements
+
+* [Node.js](https://nodejs.org)
+* [Python 3](https://www.python.org)
+
 ## Linter
 
 Install dependencies
