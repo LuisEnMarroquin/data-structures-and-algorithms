@@ -178,6 +178,8 @@ Output [4, 8, 6, 6, 2]
 ### Tries
 ### Graphs
 
+From YouTube channel **Computer Science** - [Graph Data Structure 1. Terminology and Representation (algorithms)](https://www.youtube.com/watch?v=c8P9kB1eun4)
+
 ## Algorithms
 
 An algorithm is a finite sequence of well-defined, computer-implementable instructions, typically to solve a class of problems or to perform a computation.
@@ -186,9 +188,34 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Algorithm)
 
 ### Quicksort
 
+A quicksort is a divide and conquer algorithm, the essence of this if to repeatedly partition an unordered list.
+A pivot is selected, then all of the items smaller than the pivot are put on the left-hand side and all of the items larger than the pivot are put on the right-hand side.
+The pivot is then placed in between the two sub lists, the sub lists on either side of the pivot are still unordered.
+But the pivot, which is in a sublist of only one item is now in the right place.
+The partitioning process can then be repeated with the two unordered sub lists on either side of the pivot, which will generate even more sub lists.
+We can continue to repeat the process with any sub lists that we generate which contain more than one item.
+And ultimately we will have only single items which are all in the right place.
+
 From YouTube channel **Computer Science** - [Quicksort 1 – The Algorithm](https://www.youtube.com/watch?v=h_9kAXFKJwY)
 
 ### Merge sort
+
+Merge sort is a divide and conquer algorithm that was invented by John von Neumann in 1945. Conceptually, a merge sort works as follows:
+* Divide the unsorted list into n sublists, each containing one element (a list of one element is considered sorted).
+* Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.
+
+![image-not-found](mergeSort.gif)
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+
+From YouTube channel **Computer Science** - [Merge Sort 1 – The Algorithm](https://www.youtube.com/watch?v=M5kMzPswo20)
+
 ### Binary search
+
+From YouTube channel **Computer Science** - [Binary Search - Algorithm and Pseudo-code](https://www.youtube.com/watch?v=2BhQxgIgXX4)
+
 ### Depth-first search
+
+From YouTube channel **Computer Science** - [Graph Data Structure 3. Traversing a Graph (algorithms)](https://www.youtube.com/watch?v=ymlzHmRN4To)
+
 ### Breadth-first search
