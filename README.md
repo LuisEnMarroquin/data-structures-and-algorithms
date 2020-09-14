@@ -196,6 +196,11 @@ The partitioning process can then be repeated with the two unordered sub lists o
 We can continue to repeat the process with any sub lists that we generate which contain more than one item.
 And ultimately we will have only single items which are all in the right place.
 
+The quick sort is a divide and conquer algorithm which sorts a list by selecting a pivot value from the list, then placing other items on either side of the pivot depending on whether they are bigger or smaller.
+This results in three partitions with the pivot in the correct place.
+This partitioning process is repeated for each partition generated, until every partition contains only one item, each of which is in the correct place.
+This video also includes descriptions of two different versions of pseudocode for the quick sort algorithm.
+
 From YouTube channel **Computer Science** - [Quicksort 1 – The Algorithm](https://www.youtube.com/watch?v=h_9kAXFKJwY)
 
 ### Merge sort
