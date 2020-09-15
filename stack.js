@@ -8,7 +8,7 @@ class Stack {
     if (this.top < this.maximumSize) {
       this.data[this.top] = newItem
       this.top++
-      console.log('\n', this.get)
+      this.get()
     } else {
       console.log('\n', `Stack (${this.top}) is full, can't add ${newItem}`)
     }
@@ -16,14 +16,14 @@ class Stack {
   pop () {
     if (this.top !== 0) {
       this.top--
-      console.log('\n', this.get)
+      this.get()
     }
   }
-  get get () {
-    return [
+  get () {
+    console.log('\n', [
       this.top,
       this.data.slice(0, this.top)
-    ]
+    ])
   }
 }
 
@@ -41,4 +41,4 @@ array.pop()
 
 array.push('Jessy')
 
-array.push('Donald')
+array.push('Harry')

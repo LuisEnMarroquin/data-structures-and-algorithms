@@ -1,0 +1,21 @@
+{
+  "editor.tabSize": 2,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/LICENSE": true
+  },
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/*.out": true,
+    "**/.DS_Store": true,
+    "**/.directory": true,
+    "**/desktop.ini": true
+  },
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp"
+  }
+}

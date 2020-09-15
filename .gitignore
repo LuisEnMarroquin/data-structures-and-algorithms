@@ -5,3 +5,7 @@ desktop.ini
 
 # Test files
 nothing.*
+
+# Executables
+*.exe
+*.out

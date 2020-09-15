@@ -6,8 +6,9 @@ Some great coding challenges using JavaScript and Python
 
 * [Node.js](https://nodejs.org)
 * [Python 3](https://www.python.org)
+* [g++](https://es.wikipedia.org/wiki/GNU_Compiler_Collection)
 
-## Linter
+## Lint code
 
 Install dependencies
 
