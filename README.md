@@ -111,6 +111,7 @@ Summary
 * Stacks are used by compilers to evaluate mathematical expressions which requiere intermediate steps
 
 Files
+* stack.cpp
 * stack.js
 * stack.py
 
@@ -206,6 +207,9 @@ The quick sort is a divide and conquer algorithm which sorts a list by selecting
 This results in three partitions with the pivot in the correct place.
 This partitioning process is repeated for each partition generated, until every partition contains only one item, each of which is in the correct place.
 This video also includes descriptions of two different versions of pseudocode for the quick sort algorithm.
+
+Files
+* quicksort.py
 
 From YouTube channel **Computer Science** - [Quicksort 1 – The Algorithm](https://www.youtube.com/watch?v=h_9kAXFKJwY)
 

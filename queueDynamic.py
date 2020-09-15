@@ -1,43 +1,42 @@
 class Queue():
-  def __init__(self, firstItem):
+  def __init__(self):
     self.front = 1
-    self.nextFree = 2
-    self.data = [ firstItem ]
+    self.next = 1
+    self.data = []
+  def enqueue(self, newItem):
+    self.data.insert(self.next - 1, newItem)
+    self.next = self.next + 1
     self.get()
-  def append(self, newItem):
-    self.data.insert(self.nextFree - 1, newItem)
-    self.nextFree = self.nextFree + 1
-    self.get()
-  def pop(self):
-    if self.front < self.nextFree:
+  def dequeue(self):
+    if self.front < self.next:
       self.front = self.front + 1
       self.get()
     else:
-      print("Can't pop, queue is empty")
+      print('* * *', "Can't dequeue, queue is empty")
   def get(self):
     cutData = self.data[slice(self.front - 1, len(self.data))]
-    print(self.front, self.nextFree, len(self.data), cutData)
+    print(self.front, self.next, len(self.data), cutData)
 
-item = Queue("Kevin")
+item = Queue()
 
-item.pop()
+item.dequeue()
 
-item.pop()
+item.enqueue('Kevin')
 
-item.append('Sally')
+item.dequeue()
 
-item.append('Harry')
+item.dequeue()
 
-item.append('Evelyn')
+item.enqueue('Sally')
 
-item.append('Noah')
+item.enqueue('Harry')
 
-item.pop()
+item.enqueue('Evelyn')
 
-item.append('Florence')
+item.enqueue('Noah')
 
-item.append('Theodore')
+item.dequeue()
 
-item.pop()
+item.enqueue('Florence')
 
-item.append('Harper')
+item.enqueue('Theodore')
