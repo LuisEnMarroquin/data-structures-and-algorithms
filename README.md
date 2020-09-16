@@ -209,7 +209,7 @@ This partitioning process is repeated for each partition generated, until every 
 This video also includes descriptions of two different versions of pseudocode for the quick sort algorithm.
 
 Files
-* quicksort.py
+* quickSort.py
 
 From YouTube channel **Computer Science** - [Quicksort 1 – The Algorithm](https://www.youtube.com/watch?v=h_9kAXFKJwY)
 
@@ -223,6 +223,11 @@ Merge sort is a divide and conquer algorithm that was invented by John von Neuma
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
 
+Files
+* mergeSort.py
+
+From GitHub repository [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python/pull/2441)
+
 From YouTube channel **Computer Science** - [Merge Sort 1 – The Algorithm](https://www.youtube.com/watch?v=M5kMzPswo20)
 
 ### Binary search
@@ -234,3 +239,5 @@ From YouTube channel **Computer Science** - [Binary Search - Algorithm and Pseud
 From YouTube channel **Computer Science** - [Graph Data Structure 3. Traversing a Graph (algorithms)](https://www.youtube.com/watch?v=ymlzHmRN4To)
 
 ### Breadth-first search
+
+From YouTube channel **Computer Science** - [Graph Data Structure 3. Traversing a Graph (algorithms)](https://www.youtube.com/watch?v=ymlzHmRN4To)

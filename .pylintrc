@@ -7,7 +7,8 @@ disable=
   too-few-public-methods,
   missing-class-docstring,
   missing-module-docstring,
-  missing-function-docstring
+  missing-function-docstring,
+  inconsistent-return-statements
 
 [BASIC]
 

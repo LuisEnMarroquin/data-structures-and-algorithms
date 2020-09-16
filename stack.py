@@ -23,18 +23,20 @@ class Stack():
       self.data[0:self.top]
     ])
 
-array = Stack(3)
+if __name__ == "__main__":
 
-array.push('Kevin')
+  array = Stack(3)
 
-array.push('Sally')
+  array.push('Kevin')
 
-array.push('David')
+  array.push('Sally')
 
-array.push('Sonya')
+  array.push('David')
 
-array.pop()
+  array.push('Sonya')
 
-array.push('Jessy')
+  array.pop()
 
-array.push('Harry')
+  array.push('Jessy')
+
+  array.push('Harry')
