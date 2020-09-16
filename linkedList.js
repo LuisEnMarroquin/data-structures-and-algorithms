@@ -4,14 +4,15 @@ class LinkedList {
     this.Content = [
       { id: 1, next: 0, data: firstItem }
     ]
+    this.getItems()
   }
-  get getItems () {
-    return {
+  getItems () {
+    console.log('\n', {
       Start: this.Start,
       Content: this.Content
-    }
+    })
   }
-  get getItemsSorted () {
+  getItemsSorted () {
     let sortedContent = []
     let findID = this.Content.find(({ id }) => id === this.Start)
     let nextIndex = findID.id - 1
@@ -19,10 +20,10 @@ class LinkedList {
       sortedContent.push(this.Content[nextIndex])
       nextIndex = this.Content[nextIndex].next - 1
     })
-    return {
+    console.log('\n', 'Sorted:\n', {
       Start: this.Start,
       Content: sortedContent
-    }
+    })
   }
   addBefore (newItem, beforeData = null) {
     let newID = this.Content.length + 1
@@ -68,27 +69,22 @@ class LinkedList {
     if (newObject) {
       this.Content.push(newObject)
     }
+    this.getItems()
   }
 }
 
 const list = new LinkedList('Chloe')
-console.log('\n', list.getItems)
 
 list.addBefore('Francis')
-console.log('\n', list.getItems)
 
 list.addBefore('Beatrix', 'Chloe')
-console.log('\n', list.getItems)
 
 list.addBefore('David', 'Francis')
-console.log('\n', list.getItems)
 
 list.addBefore('Edward', 'Francis')
-console.log('\n', list.getItems)
 
 list.addBefore('Abigail', 'Beatrix')
-console.log('\n', list.getItems)
 
 list.addBefore('NoOne', 'NonExisting')
 
-console.log('\n', 'Sorted:\n', list.getItemsSorted)
+list.getItemsSorted()

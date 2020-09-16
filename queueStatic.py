@@ -62,3 +62,9 @@ item.enqueue('Theodore')
 item.shuffle()
 
 item.enqueue('Donald')
+
+item.shuffle()
+
+item.dequeue()
+
+item.shuffle()
