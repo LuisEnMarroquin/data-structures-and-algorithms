@@ -2,9 +2,9 @@
 #include <string.h>
 
 typedef struct Stack {
-  int top;
+  int  top;
   char data[3][16];
-  int maximumSize;
+  int  maximumSize;
 } Stack;
 
 void get(Stack myStack) {

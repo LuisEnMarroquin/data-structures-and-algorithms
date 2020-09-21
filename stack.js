@@ -16,7 +16,7 @@ class Stack {
       this.top++
       this.get()
     } else {
-      console.log('\n', `Stack (${this.top}) is full, can't add ${newItem}`)
+      console.log(`\n Stack (${this.top}) is full, can't add ${newItem}`)
     }
   }
   pop () {

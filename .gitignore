@@ -10,3 +10,7 @@ nothing.*
 *.exe
 *.out
 *.class
+
+# Logs
+*.o
+*.log

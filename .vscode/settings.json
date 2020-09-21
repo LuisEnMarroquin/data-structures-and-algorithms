@@ -8,8 +8,10 @@
     "**/LICENSE": true
   },
   "files.exclude": {
+    "**/*.o": true,
     "**/*.exe": true,
     "**/*.out": true,
+    "**/*.class": true,
     "**/.DS_Store": true,
     "**/.directory": true,
     "**/desktop.ini": true
