@@ -15,7 +15,17 @@
     "**/desktop.ini": true
   },
   "files.associations": {
+    "**/*.json": "jsonc",
+    "**/Containerfile": "dockerfile",
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "optional": "c",
+    "istream": "c",
+    "system_error": "c",
+    "array": "c",
+    "functional": "c",
+    "tuple": "c",
+    "type_traits": "c",
+    "utility": "c"
   }
 }

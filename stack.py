@@ -3,6 +3,11 @@ class Stack():
     self.top = 0
     self.data = []
     self.maximumSize = maxSize
+  def get(self):
+    print('\n', [
+      self.top,
+      self.data[0:self.top]
+    ])
   def push(self, newItem):
     if self.top < self.maximumSize:
       if self.top == len(self.data):
@@ -17,11 +22,6 @@ class Stack():
     if self.top != 0:
       self.top = self.top -1
       self.get()
-  def get(self):
-    print('\n', [
-      self.top,
-      self.data[0:self.top]
-    ])
 
 if __name__ == "__main__":
 

@@ -4,6 +4,12 @@ class Stack {
     this.data = []
     this.maximumSize = maxSize
   }
+  get () {
+    console.log('\n', [
+      this.top,
+      this.data.slice(0, this.top)
+    ])
+  }
   push (newItem) {
     if (this.top < this.maximumSize) {
       this.data[this.top] = newItem
@@ -18,12 +24,6 @@ class Stack {
       this.top--
       this.get()
     }
-  }
-  get () {
-    console.log('\n', [
-      this.top,
-      this.data.slice(0, this.top)
-    ])
   }
 }
 

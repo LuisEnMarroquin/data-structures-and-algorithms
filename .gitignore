@@ -9,3 +9,4 @@ nothing.*
 # Executables
 *.exe
 *.out
+*.class

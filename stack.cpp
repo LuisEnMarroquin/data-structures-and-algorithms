@@ -1,15 +1,20 @@
 #include <iostream>
-
 using namespace std;
 
 class Stack {
   private:
-    int top;
+    int top = 0;
     string data[3] = {};
     int maximumSize = 3;
   public:
-    Stack() {
-      top = 0;
+    void get() {
+      cout << "\n " << top << " [ ";
+      for(int i = 0; i < top; i++) {
+        if (data[i] != "") {
+          cout << data[i] << " ";
+        }
+      }
+      cout << "]\n";
     }
     void push(string newItem) {
       if (top < maximumSize) {
@@ -25,15 +30,6 @@ class Stack {
         top = top - 1;
         get();
       }
-    }
-    void get() {
-      cout << "\n " << top << " [ ";
-      for(int i = 0; i < top; i++) {
-        if (data[i] != "") {
-          cout << data[i] << " ";
-        }
-      }
-      cout << "]\n";
     }
 };
 
